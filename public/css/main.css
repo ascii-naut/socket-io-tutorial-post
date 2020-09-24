@@ -29,8 +29,8 @@ body, .jumbotron {
     left: 46%;
     transition: 0.1s ease all;
 
-    width: 80px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
 }
 .btn-start {
     display: block;
@@ -55,9 +55,6 @@ body, .jumbotron {
 }
 .score {
     font-size: 60px;
-    position: absolute;
-    top: 1%;
-    left: 47%;
     pointer-events: none;
     border-bottom: 2px solid black;
     padding-left: 10px;
@@ -80,9 +77,6 @@ body, .jumbotron {
 }
 .my-time-text {
     font-size: 30px;
-    position: absolute;
-    top: 12%;
-    left: 42.5%;
     pointer-events: none;
     -webkit-text-stroke: 1px rgb(0, 0, 0);
     -webkit-text-fill-color: rgb(255, 255, 255);
