@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- My meta tags -->
+    <meta name="author" content="Denislav Gavrilov">
+    <meta name="keywords" content="asciinaut, asciinaut.sh, denislav blog, denislav gavrilov, tech blog">
+    <meta name="description" content="Hey, $user, you found a project! Hit the button as hard as you can. You must also be quick, there's a timer!"/>
+    <meta name="twitter:card" content="{{ asset ('assets/img/web-card.png') }}">
+    <meta property="og:url" content="https://asciinaut.sh/">
+    <meta property="og:image" content="{{ asset ('assets/img/web-card.png') }}">
+
+    <title>A really annoying button. Hit it hard!</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<section>
+    <button type="button" id="crazyButton" class="btn-crazy btn btn-lg btn-danger">
+    </button>
+    <button type="button" id="startButton" class="btn-start btn btn-lg">Start
+    </button>
+    <a href="/" class="nes-btn is-warning home-btn">Home</a>
+
+<div class="starting-section">
+    <div class="text-left" style="border-bottom: 2px solid black; border-right: 2px solid black;">
+        <h3 class="game-title">Aim Trainer</h3>
+        <p>Can you click the button fast enough? Psst... there is a timer!</p>
+    </div>
+    <div class="text-right" style="border-bottom: 2px solid black; border-left: 2px solid black;">
+        <h3>Tutorial</h3>
+        <p>There 60 seconds. Click the target as many times as you can.</p>
+    </div>
+</div>
+    
+    <h3 class="time"><span class="time"></span></h3>
+    <h3 class="my-time-text">Hit hard!</h3>
+    <h3 class="score"></h3>
+</section>
+    <!-- My Javacript -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/app.js" charset="utf-8"></script>
+</body>
+</html>
