@@ -11,9 +11,6 @@ let io = socketIO(server);
 
 app.use(express.static(publicPath))
 
-let num = Number(0);
-let savedNumber = num;
-
 
 io.on('connection', (socket) => {
 
@@ -23,25 +20,10 @@ io.on('connection', (socket) => {
     socket.on('crazyIsClicked', (data) => {
         io.emit('crazyIsClicked', data);
     });
-  
-    socket.on('giveMeNumber', () => {
-        io.emit('takeThisData', num)
-    })
-
-    socket.emit('updateServerNumber', () => {
-        //num++;
-        savedNumber = num;
-    });
-    socket.on('changeServerNumber', (data) => {
-        num = data;
-    })
 
     socket.on('disconnect', () => {
         console.log('A user has disconnected.');
-        savedNumber = num;
     })
-
-    io.emit('save', savedNumber);
 });
 
 server.listen(port, ()=> {
